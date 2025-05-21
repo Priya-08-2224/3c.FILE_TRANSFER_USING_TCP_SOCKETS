@@ -9,7 +9,7 @@ To write a python program for creating File Transfer using TCP Sockets Links
 5. In the client side receive the file from server and then write the content into it.
 ## PROGRAM
 ## CLIENT
- 
+``` 
 import socket 
 s = socket.socket() 
 host = socket.gethostname() 
@@ -27,9 +27,10 @@ with open('received_file', 'wb') as f:
 f.close() 
 print('Successfully get the file') 
 s.close() 
-print('connection closed') 
+print('connection closed')
+```
 ## SERVER
- 
+``` 
 import socket                    
 port = 60000                    
 s = socket.socket()              
@@ -51,7 +52,7 @@ while True:
     print('Done sending') 
     conn.send('Thank you for connecting'.encode()) 
     conn.close() 
-
+```
 ## OUPUT
 ![image](https://github.com/user-attachments/assets/cedde7fa-7220-4f6d-b5aa-666f15b94063)
 ![image](https://github.com/user-attachments/assets/bd9759ac-fd09-46aa-998c-0b94f1879cce)
